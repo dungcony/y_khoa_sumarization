@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: vn-summarization
+Version: 1.0.0
+Summary: Vietnamese Text Summarization - Fine-tuning seq2seq models for Vietnamese abstractive summarization
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: torch>=2.3.0
+Requires-Dist: transformers<5,>=4.51.0
+Requires-Dist: tokenizers<=0.23.0,>=0.22.0
+Requires-Dist: datasets>=2.20.0
+Requires-Dist: evaluate>=0.4.2
+Requires-Dist: rouge-score>=0.1.2
+Requires-Dist: sentencepiece>=0.2.0
+Requires-Dist: peft>=0.12.0
+Requires-Dist: accelerate>=0.33.0
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: pyarrow>=15.0.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: tensorboard>=2.16.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: protobuf>=4.25.0
+Requires-Dist: streamlit>=1.40.0
+Provides-Extra: dev
+Requires-Dist: ruff>=0.6.0; extra == "dev"
+Requires-Dist: pytest>=8.0; extra == "dev"

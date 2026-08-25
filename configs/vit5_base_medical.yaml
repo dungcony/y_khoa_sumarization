@@ -1,0 +1,60 @@
+# Một lần tinh chỉnh ViT5-base trực tiếp trên dữ liệu y khoa
+# "phase" chỉ là trường metadata mà lớp cấu hình hiện tại yêu cầu; quy trình không tách giai đoạn.
+phase:
+  name: "medical_single_run"
+  description: "Fine-tune ViT5-base một lần trên dữ liệu tóm tắt y khoa tiếng Việt."
+
+model:
+  name_or_path: "VietAI/vit5-base"
+  use_fast_tokenizer: false
+  trust_remote_code: false
+
+data:
+  train_file: "data/train.csv"
+  valid_file: "data/validation.csv"
+  test_file: "data/test.csv"
+  source_prefix: "summarize: "
+  max_source_length: 768
+  max_target_length: 160
+
+training:
+  output_dir: "outputs_medical/vit5_base"
+  seed: 42
+  num_train_epochs: 3
+  max_steps: -1
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 8  # Kích thước lô hiệu dụng: 16/GPU
+  learning_rate: 0.00003
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  lr_scheduler_type: "cosine"
+  optim: "adafactor"
+  label_smoothing_factor: 0.0
+  precision: "auto"
+  gradient_checkpointing: true
+  freeze_encoder: false
+  eval_strategy: "epoch"
+  eval_steps: 500
+  save_strategy: "epoch"
+  save_steps: 500
+  save_total_limit: 2
+  logging_steps: 25
+  metric_for_best_model: "rougeL"
+  greater_is_better: true
+  load_best_model_at_end: true
+  early_stopping_patience: 2
+  ddp_find_unused_parameters: false
+
+generation:
+  max_length: 160
+  min_length: 10
+  num_beams: 2
+  length_penalty: 1.0
+  no_repeat_ngram_size: 3
+  repetition_penalty: 1.0
+  do_sample: false
+  early_stopping: true
+
+lora:
+  enabled: false

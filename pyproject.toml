@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vn-summarization"
+version = "1.0.0"
+description = "Vietnamese Text Summarization - Fine-tuning seq2seq models for Vietnamese abstractive summarization"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "torch>=2.3.0",
+    "transformers>=4.51.0,<5",
+    "tokenizers>=0.22.0,<=0.23.0",
+    "datasets>=2.20.0",
+    "evaluate>=0.4.2",
+    "rouge-score>=0.1.2",
+    "sentencepiece>=0.2.0",
+    "peft>=0.12.0",
+    "accelerate>=0.33.0",
+    "pandas>=2.2.0",
+    "pyarrow>=15.0.0",
+    "pyyaml>=6.0.1",
+    "tensorboard>=2.16.0",
+    "numpy>=1.26.0",
+    "protobuf>=4.25.0",
+    "streamlit>=1.40.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6.0", "pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
