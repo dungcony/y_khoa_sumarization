@@ -37,9 +37,16 @@ class TrainingProgressCallback(TrainerCallback):
 
     def _device_status(self) -> str:
         if torch.cuda.is_available():
-            allocated = torch.cuda.memory_allocated() / (1024 ** 3)
-            reserved = torch.cuda.memory_reserved() / (1024 ** 3)
-            return f"GPU RAM={allocated:.2f}/{reserved:.2f} GB"
+            statuses = []
+            for index in range(torch.cuda.device_count()):
+                allocated = torch.cuda.memory_allocated(index) / (1024 ** 3)
+                reserved = torch.cuda.memory_reserved(index) / (1024 ** 3)
+                total = torch.cuda.get_device_properties(index).total_memory / (1024 ** 3)
+                statuses.append(
+                    f"GPU{index}: dùng={allocated:.2f} GB, "
+                    f"cache={reserved:.2f} GB, tổng={total:.2f} GB"
+                )
+            return " | ".join(statuses)
         return "CPU đang hoạt động"
 
     def _emit(self, message: str) -> None:

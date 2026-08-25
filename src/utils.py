@@ -142,7 +142,14 @@ def detect_precision() -> str:
     if not torch.cuda.is_available():
         return "fp32"
 
-    if torch.cuda.is_bf16_supported():
+    # Turing (ví dụ Tesla T4, compute capability 7.5) có thể được PyTorch
+    # báo hỗ trợ bf16 qua mô phỏng nhưng không có Tensor Core bf16 bản địa.
+    device_count = torch.cuda.device_count()
+    native_bf16 = device_count > 0 and torch.cuda.is_bf16_supported() and all(
+        torch.cuda.get_device_capability(index)[0] >= 8
+        for index in range(device_count)
+    )
+    if native_bf16:
         return "bf16"
 
     return "fp16"
