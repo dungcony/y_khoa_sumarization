@@ -22,9 +22,9 @@ training:
   seed: 42
   num_train_epochs: 3
   max_steps: -1
-  per_device_train_batch_size: 8
-  per_device_eval_batch_size: 8
-  gradient_accumulation_steps: 2  # T4 x2: kích thước lô hiệu dụng 8 x 2 x 2 = 32
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4  # T4 x2: kích thước lô hiệu dụng 4 x 4 x 2 = 32
   learning_rate: 0.00003
   weight_decay: 0.01
   warmup_ratio: 0.05
