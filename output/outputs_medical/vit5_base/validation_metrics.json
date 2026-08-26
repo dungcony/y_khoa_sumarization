@@ -1,0 +1,11 @@
+{
+  "validation_loss": 1.7783029079437256,
+  "validation_rouge1": 30.71,
+  "validation_rouge2": 16.56,
+  "validation_rougeL": 24.22,
+  "validation_gen_len": 56.3,
+  "validation_runtime": 954.778,
+  "validation_samples_per_second": 2.53,
+  "validation_steps_per_second": 0.316,
+  "epoch": 3.0
+}

@@ -1,0 +1,41 @@
+{
+  "domain": "Vietnamese medical news",
+  "columns": [
+    "article",
+    "summary"
+  ],
+  "splits": {
+    "train": {
+      "file": "/kaggle/input/datasets/b22dccn128lngtindng/medical-sumarization/train.csv",
+      "sha256": "e41a5f6e94459dad425e1c3c3e0f7b6b22f0f2b088b2686a4f28ed65368dcbea",
+      "rows": 12435,
+      "article_words_mean": 625.11,
+      "article_words_median": 561.0,
+      "summary_words_mean": 39.81,
+      "summary_words_median": 38.0
+    },
+    "validation": {
+      "file": "/kaggle/input/datasets/b22dccn128lngtindng/medical-sumarization/validation.csv",
+      "sha256": "ec670819f3eb0d5c9940a1f35d4ca119ab4472479e3dab42b3ff337b3563511c",
+      "rows": 2416,
+      "article_words_mean": 651.62,
+      "article_words_median": 598.5,
+      "summary_words_mean": 39.48,
+      "summary_words_median": 38.0
+    },
+    "test": {
+      "file": "/kaggle/input/datasets/b22dccn128lngtindng/medical-sumarization/test.csv",
+      "sha256": "fbc6a4c4cd0264b133c363e68e7944352a1b756a0c4d9bd7ee2905c21640444b",
+      "rows": 2423,
+      "article_words_mean": 644.92,
+      "article_words_median": 593.0,
+      "summary_words_mean": 39.34,
+      "summary_words_median": 37.0
+    }
+  },
+  "cross_split_article_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "model": {
+    "name_or_path": "VietAI/vit5-base",
+    "use_fast_tokenizer": false,
+    "trust_remote_code": false,
+    "cache_dir": null,
+    "max_parameters": 3000000000,
+    "dropout": null
+  },
+  "data": {
+    "train_file": "/kaggle/input/datasets/b22dccn128lngtindng/medical-sumarization/train.csv",
+    "valid_file": "/kaggle/input/datasets/b22dccn128lngtindng/medical-sumarization/validation.csv",
+    "test_file": "/kaggle/input/datasets/b22dccn128lngtindng/medical-sumarization/test.csv",
+    "source_prefix": "summarize: ",
+    "max_source_length": 768,
+    "max_target_length": 160,
+    "max_train_samples": null,
+    "max_eval_samples": null
+  },
+  "training": {
+    "output_dir": "/kaggle/working/outputs_medical/vit5_base",
+    "seed": 42,
+    "num_train_epochs": 3,
+    "max_steps": -1,
+    "per_device_train_batch_size": 4,
+    "per_device_eval_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 3e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.05,
+    "lr_scheduler_type": "cosine",
+    "optim": "adafactor",
+    "label_smoothing_factor": 0.0,
+    "precision": "fp16",
+    "gradient_checkpointing": false,
+    "freeze_encoder": false,
+    "eval_strategy": "epoch",
+    "eval_steps": 500,
+    "save_strategy": "epoch",
+    "save_steps": 500,
+    "save_total_limit": 2,
+    "logging_steps": 25,
+    "metric_for_best_model": "rougeL",
+    "greater_is_better": true,
+    "load_best_model_at_end": true,
+    "early_stopping_patience": 2,
+    "resume_from_checkpoint": null,
+    "ddp_find_unused_parameters": false
+  },
+  "generation": {
+    "max_length": 160,
+    "max_new_tokens": null,
+    "min_length": 10,
+    "num_beams": 2,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 3,
+    "repetition_penalty": 1.0,
+    "do_sample": false,
+    "early_stopping": true
+  },
+  "lora": {
+    "enabled": false,
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": "auto"
+  },
+  "phase": {
+    "name": "medical_single_run",
+    "description": "Fine-tune ViT5-base một lần trên dữ liệu tóm tắt y khoa tiếng Việt."
+  }
+}

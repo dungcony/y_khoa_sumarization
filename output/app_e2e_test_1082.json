@@ -1,0 +1,24 @@
+{
+  "test_id": 1082,
+  "execution": "streamlit.testing.v1.AppTest",
+  "model": "ViT5-base fine-tune y khoa",
+  "device": "CPU",
+  "settings": {
+    "max_length": 160,
+    "num_beams": 2,
+    "no_repeat_ngram_size": 3,
+    "max_source_length": 768
+  },
+  "article": "Bệnh nhân ngừng ECMO và thở máy sau gần 2 tháng điều trị - BVCC Bệnh viện Bạch Mai vừa thông tin về ca bệnh viêm phổi bội nhiễm, suy đa tạng do lạm dụng corticoid tự điều trị cúm. Sau gần 2 tháng điều trị với 37 ngày chạy ECMO, bệnh nhân mới hồi phục. Theo đó, bệnh nhân nữ 37 tuổi ở Hà Nội bị nhiễmcúmtừ ngày 27-10-2022 với biểu hiện sốt, ngứa họng, ho, chảy nước mũi, đau mỏi toàn thân. Bệnh nhân tự điều trị hạ sốt và corticoid (medrol 16mg/ngày). Ba ngày sau tình trạng không cải thiện, sốt cao kéo dài kèm khó thở nhiều, phải thở oxy, sau đó thở máy. Theo bác sĩ Nguyễn Bá Cường - Trung tâm hồi sức tích cực, Bệnh viện Bạch Mai, khi vào trung tâm, tình trạng bệnh nhân rất nặng, sốt cao liên tục, sốc nhiễm khuẩn nặng, oxy máu giảm rất thấp. X-quang phổi mờ trắng xóa cả hai bên phế trường, test nhanh cúm B dương tính. \"Điều đặc biệt là mặc dù nhiễm cúm nhưng tình trạng nhiễm vi khuẩn trên xét nghiệm rất cao, kèm theo đó là số lượng bạch cầu giảm trầm trọng còn 0.750 G/L (bình thường 4.0-10.0 G/L). Sau khi thực hiện thêm các xét nghiệm, bệnh nhân được chẩn đoán mắc cúm B kèm bội nhiễm tụ cầu vàng\", bác sĩ Cường thông tin. Bác sĩ Cường cho biết thêm triệu chứng giảm bạch cầu rất hay gặp ở bệnh nhân nhiễm vi rút, đặc biệt là nhiễm cúm và sốt xuất huyết (hai dịch bệnh đang lưu hành rộng rãi ở Việt Nam) làm giảm sức đề kháng của cơ thể. Corticoid là thuốc chống viêm nhưng có tác dụng phụ là giảm sức chống đỡ của cơ thể. Việc lạm dụng thuốc này ở các bệnh nhân nhiễm vi rút làm tăng nguy cơ bội nhiễm, đặc biệt là các vi khuẩn kháng thuốc. Bệnh nhân sau đó không đáp ứng với điều trị hồi sức, phải can thiệp ECMO cấp cứu. Trong quá trình 37 ngày chạy ECMO, gần 50 ngày thở máy với oxy liều cao. Do suy giảm khả năng đề kháng, nữ bệnh nhân này rất dễ nhạy cảm với các vi sinh vật trong bệnh viện và phải điều trị nhiều đợt kháng sinh, kháng nấm. Sau hơn 2 tháng điều trị hồi sức tích cực, bệnh nhân được ra viện, tuy nhiên các tổn thương phổi sau đó có thể sẽ còn tồn tại và cần phải theo dõi trong thời gian dài. Bác sĩ Cường khuyến cáo việc lạm dụng corticoid diễn ra thường xuyên ở Việt Nam, đặc biệt trong điều trị nhiễm cúm và các bệnh xương khớp (được trộn lẫn trong các thành phần thuốc cổ truyền không rõ nguồn gốc). Theo các bác sĩ, thuốc phải được dùng đúng chỉ định và liều lượng. \"Việc dùng bừa bãi làm suy giảm khả năng đề kháng và rất dễ bội nhiễm vi khuẩn. Trong đợt dịch cúm và sốt xuất huyết năm nay, Trung tâm hồi sức tích cực tiếp nhận rất nhiều các ca nhiễm vi rút nguy kịch.Đặc biệt, ở các ca này ngoài vấn đề nặng do nhiễm vi rút thì các bệnh nhân đều bội nhiễm thêm vi khuẩn đa kháng thuốc (tụ cầu vàng, trực khuẩn mủ xanh, phế cầu...) dẫn đến sốc nhiễm khuẩn, suy đa tạng\", bác sĩ Cường cảnh báo. Rất nhiều người bệnh đang phải hằng ngày gánh chịu những hậu quả khôn lường do việc lạm dụng corticoid gây ra, trong đó có những biến chứng nặng.",
+  "article_words": 613,
+  "reference": "Bệnh viện Bạch Mai vừa cứu sống một bệnh nhân bị viêm phổi bội nhiễm, suy đa tạng do lạm dụng corticoid tự điều trị cúm.",
+  "reference_words": 26,
+  "app_summary": "Bệnh viện Bạch Mai vừa tiếp nhận một ca bệnh viêm phổi bội nhiễm, suy đa tạng do lạm dụng corticoid tự điều trị cúm.",
+  "app_summary_words": 25,
+  "saved_test_prediction": "Bệnh viện Bạch Mai vừa tiếp nhận một ca bệnh viêm phổi bội nhiễm, suy đa tạng do lạm dụng corticoid tự điều trị cúm.",
+  "matches_saved_prediction": true,
+  "success_message": "Tóm tắt thành công!",
+  "caption": "📊 Độ dài giảm từ **613 từ** xuống còn **25 từ** (Tỷ lệ nén: **95.9%**; thời gian suy luận: **3.33 giây** trên **CPU**).",
+  "cold_start_seconds": 4.47,
+  "interaction_seconds": 3.35
+}

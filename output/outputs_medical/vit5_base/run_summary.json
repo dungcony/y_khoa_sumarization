@@ -1,0 +1,41 @@
+{
+  "smoke_test": false,
+  "model": "VietAI/vit5-base",
+  "dataset_domain": "Vietnamese medical news",
+  "dataset_rows": {
+    "train": 12435,
+    "validation": 2416,
+    "test": 2423
+  },
+  "used_rows": {
+    "train": 12435,
+    "validation": 2416,
+    "test": 2423
+  },
+  "best_checkpoint": "/kaggle/working/outputs_medical/vit5_base/checkpoint-1167",
+  "best_validation_metric": 24.22,
+  "training_seconds": 8381.98,
+  "test_seconds": 954.3,
+  "test_samples_per_second": 2.539,
+  "validation_metrics": {
+    "validation_loss": 1.7783029079437256,
+    "validation_rouge1": 30.71,
+    "validation_rouge2": 16.56,
+    "validation_rougeL": 24.22,
+    "validation_gen_len": 56.3,
+    "validation_runtime": 954.778,
+    "validation_samples_per_second": 2.53,
+    "validation_steps_per_second": 0.316,
+    "epoch": 3.0
+  },
+  "test_metrics": {
+    "test_loss": 1.769860029220581,
+    "test_rouge1": 30.64,
+    "test_rouge2": 16.56,
+    "test_rougeL": 24.22,
+    "test_gen_len": 55.5,
+    "test_runtime": 954.2857,
+    "test_samples_per_second": 2.539,
+    "test_steps_per_second": 0.318
+  }
+}
